@@ -4,6 +4,7 @@
     --title-color: #363738;
     --text-color:#6B6B6C;
 }
+
 *,
 *::before,
 *::after {
@@ -870,6 +871,9 @@ tbody{
 .worker__media{
     padding-top: 32px;
 }
+.worker__insta{
+    padding-right: 23px;
+}
 @media (max-width:1240px) {
     .workers{
         width: 100%;
@@ -878,10 +882,9 @@ tbody{
     .worker__card{
         flex-direction: column;
         align-items: baseline;
-        /* text-align: left; */
-        /* margin-top: 24px; */
         width: 340px;
         height: 290px;
+        padding-top: 32px;
     }
     .worker__card:last-child{
         display: none;
@@ -897,21 +900,180 @@ tbody{
     .worker__img{
         width: 100px;
         height: 100px;
-        margin-top: 24px;
     }
 }
 @media (max-width:690px) {
     .workers{
-        /* display: flex; */
-        width: 345px;
+        width: 395px;
         height: 556px;
-        padding-top: 60px;
+        padding-top: 0;
     }
     .worker__card{
         display: flex;
-        /* width: 345px;
-        height: 156px; */
+        flex-direction: row;
+        align-items: center;
+        background: linear-gradient(90deg, rgba(11,117,114,1) 4%, rgba(11,78,117,0) 4%);
+        padding-top: 14px;
+        margin-bottom: 12px;
+        width: 345px;
+        height: 156px;
     }
+    .worker__card:nth-child(2){
+        display: none;
+    }
+    .worker__img{
+        margin: 24px;
+    }
+    .worker__card-info{
+        width: 172px;
+        margin-left: 12px;
+    }
+}
+/* cantacts */
+.contacts{
+    padding-top: 170px;
+}
+.contact__title{
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: var(--title-color);
+}
+.contact__box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+.contact__card{
+    display: flex;
+    align-items: center;
+    padding-bottom: 44px;
+}
+.contact__card:last-child{
+    padding-bottom: 0;  
+}
+.contact__img{
+    width: 24px;
+    height: 32px;
+}
+.contact__card-info{
+    padding-left: 32px;
+}
+.contact__card-title{
+    font-family: var(--text);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--text-color);
+}
+.contact__card-text{
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--title-color);
+}
+.address__info{
+    display:grid;
+    width: 794px;
+    height: 383px;
+    padding: 40px 48px;
+    background: #F9F9FB;
+    border-radius: 5px;
+}
+.add__line{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top:  1px solid #E9EAF2;
+    padding-top: 30px;
+}
+.add__line:first-child{
+    border: none;
+}
+.add__line-text{
+    font-family: var(--text);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--text-color);
+}
+.add__line-title{
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--title-color);
+}
+/* contact media */
+@media (max-width:1240px) {
+    .contact__box{
+       flex-direction: column;
+    }
+    .address__info{
+        width: 690px;
+        height: 368px;
+        margin-top: 50px;
+    }
+}
+@media (max-width:690px) {
+    .address__info{
+        width: 345px;
+        height: 568px;
+    }
+    .add__line{
+        flex-direction: column;
+        text-align: left;
+    }
+}
+/* orders */
+.order__box{
+    width: 100%;
+    height: 730px;
+    background: url('../image/orderb.png');
+}
+.send__order{
+    width: 699px;
+    height: 730px;
+    background: #0B7572;
+}
+.order__title{
+    padding-bottom: 72px;
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+.send__order{
+    padding: 56px;
+}
+.order__aria{
+    width: 579px;
+    height: 223px;
+    resize: none;
+    padding: 24px;
+    color: #FFFFFF;
+    background: #0B7572;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 225%;
+}
+.order__aria::placeholder{
+    color: #FFFFFF;
+}
+.send__text{
+    width: 579px;
+    height: 35px;
+    background: #0B7572;  
+      
 }
 .footer{
     padding-top: 200px;
