@@ -47,6 +47,7 @@ html,
 body {
     height: 100%;
     line-height: 150%;
+    background: #E5E5E5;
 }
 
 body {
@@ -649,16 +650,37 @@ tbody{
 }
 .delevary__card{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+    position: relative;
+    padding-bottom: 24px;
 } 
 .de__circle{
     display: flex;
-    
+    align-items: center;
     position: absolute;
-
+    /* background: #ccc; */
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.de__circle-two{
+    display: flex;
+    justify-content: center;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    background: #E5E5E5;
+    align-items: center;
 }
 .de__circle-two span{
-    font-family: 'Exo 2';
+    display: flex;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background:  #0B7572;
+    font-family: var(--title);
     font-style: normal;
     font-weight: 600;
     font-size: 38px;
@@ -708,13 +730,46 @@ tbody{
     border-bottom: 3px solid #FFCE50;
 }
 .de__text{
-    padding-top: 24px;  
+    padding-top: 14px;  
     font-family: var(--text);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: var(--text-color);
+}
+@media (max-width:1240px) {
+    .de__card-img{
+        display: none;
+    }
+    .de__card{
+        width: 621.5px;
+        height: 255px;
+        padding-left: 36px;
+    }
+}
+@media (max-width:690px) {
+    .de__card-img{
+        display: none;
+    }
+    .de__card{
+        width: 286px;
+        height: 196px;
+        padding-left: 36px;
+    }
+    .de__title{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 125%;
+    }
+    .de__text{
+        width: 171px;
+        height: 85px;
+        overflow: hidden;
+    }
+    .de__line{
+      display: none;
+    }
 }
 /* partner */
 .partner{
@@ -1112,9 +1167,6 @@ tbody{
 .send__btn:hover{
     background: #ccc;
 }
-.footer{
-    padding-top: 200px;
-}
 @media (max-width:1240px) {
     .order__box{
         width: 100%;
@@ -1182,8 +1234,10 @@ tbody{
     margin-top: 20px;
 }
 .ourdata__card-all{
+    display: flex;
     flex-direction: column;
     margin-top: 16px;
+    padding-right: 16px;
 }
 .ourdata__text{
     padding: 16px 0 40px 0;
@@ -1193,4 +1247,89 @@ tbody{
     font-size: 16px;
     line-height: 150%;
     color: var(--title-color)   ;
+}
+.ourcard__img{
+    padding-bottom: 16px;
+}
+.ourdata__btn{
+    width: 248px;
+    height: 50px;
+    margin-top: 80px;
+    background: #0B7572;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+.ourdata__btn:hover{
+    background: #FFF;
+    color: #0B7572;
+}
+@media (max-width:1024px) {
+.ourdata__box{
+    width: 100%;
+    height: 720px;
+}
+}
+@media (max-width:690px) {
+    .ourdata__box{
+        width: 100%;
+        height: 563px;
+        padding: 10px;
+    }
+    .ourdata__btn{
+        display: none;
+    }
+    .ourcard__img{
+        width: 109px;
+        height: 86px;
+    }
+    .ourdata__card-all{
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+        padding-right: 0;
+    }
+}
+/* truck part */
+.truckvideo{
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+.truckvideo__title{
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    color: var(--title-color);
+}
+.truckvideo__text{
+    margin: 32px 0;
+    font-family: var(--text);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-color);
+}
+@media (max-width:1240px) {
+    .truckvideo{
+        width: 100%;
+        height: 647px;
+        margin-top: 100px;
+    }
+    .truck{
+        width: 100%;
+        height: 433px;
+    }
+}
+@media (max-width:690px) {
+    .truckvideo{
+        width: 100%;
+        height: 617px;
+        margin-top: 100px;
+    }
+    .truck{
+        width: 100%;
+        height: 320px;
+    }
 }
